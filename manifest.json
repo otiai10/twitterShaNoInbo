@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+
+    "name": "tw社の陰謀",
+    "version": "0.1",
+
+    "description": "http://togetter.com/li/558484",
+    "icons" : {
+        "48"  : "icon.48.png",
+        "128" : "icon.128.png"
+    },
+    "permissions" : [
+        "https://twitter.com/*"
+    ],
+    "browser_action": {
+        "default_icon": "icon.128.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts" : [
+        {
+            "matches" : [
+                "https://twitter.com/*"
+            ],
+            "js" : [
+               "jquery-1.10.2.min.js",
+                "main.js" 
+            ]
+        }
+    ]
+}
